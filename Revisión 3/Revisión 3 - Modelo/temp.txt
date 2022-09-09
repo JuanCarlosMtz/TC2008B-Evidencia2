@@ -1,0 +1,29 @@
+ # Primer auto
+      x = 0
+      y = int(self.height/2)
+      direction = 0
+      car = CarAgent((x, y), self, direction, height, width)
+      self.schedule.add(car)
+      self.grid.place_agent(car, (x, y))
+
+      x = 3
+      y = int(self.height/2)
+      direction = 0
+      car = CarAgent((x, y), self, direction, height, width)
+      self.schedule.add(car)
+      self.grid.place_agent(car, (x, y))
+
+      # Segundo auto
+      x = int(self.width/2-1)
+      y = height-1
+      direction = 1
+      car = CarAgent((x, y), self, direction, height, width)
+      self.grid.place_agent(car, (x, y))
+      self.schedule.add(car)
+
+      x = int(self.width/2-1)
+      y = height-3
+      direction = 1
+      car = CarAgent((x, y), self, direction, height, width)
+      self.grid.place_agent(car, (x, y))
+      self.schedule.add(car)
